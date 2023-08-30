@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   var slides = document.querySelectorAll(".slide");
   var slides2 = document.querySelectorAll(".slide-2");
+  var slides3 = document.querySelectorAll(".slide-3");
   var currentSlide = 0;
   var currentSlide2 = 0;
+  var currentSlide3 = 0;
+
   function showSlide(slides, n) {
     slides.forEach(function (slide) {
       slide.classList.add("hidden");
@@ -20,7 +23,32 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentSlide2++ > slides2.length) currentSlide2 = 1;
     showSlide(slides2, currentSlide2 - 1);
   }
+  function nextSlide3() {
+    if (window.screen.width <= 600 && window.screen.height <= 800) {
+      if (currentSlide3++ > slides3.length) currentSlide3 = 1;
+      showSlide(slides3, currentSlide3 - 1);
+    }
+  }
 
   setInterval(nextSlide, 3000);
   setInterval(nextSlide2, 4000);
+  setInterval(nextSlide3, 3000);
 });
+
+// button scroll to top
+const mybutton = document.getElementById("btn-back-to-top");
+
+const scrollFunction = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.classList.remove("hidden");
+  } else {
+    mybutton.classList.add("hidden");
+  }
+};
+const backToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+mybutton.addEventListener("click", backToTop);
+
+window.addEventListener("scroll", scrollFunction);
