@@ -16,16 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function nextSlide() {
-    if (currentSlide++ > slides.length) currentSlide = 1;
+    if (currentSlide++ >= slides.length) currentSlide = 1;
     showSlide(slides, currentSlide - 1);
   }
   function nextSlide2() {
-    if (currentSlide2++ > slides2.length) currentSlide2 = 1;
+    if (currentSlide2++ >= slides2.length) currentSlide2 = 1;
     showSlide(slides2, currentSlide2 - 1);
   }
   function nextSlide3() {
-    if (window.screen.width <= 600 && window.screen.height <= 800) {
-      if (currentSlide3++ > slides3.length) currentSlide3 = 1;
+    if (window.innerWidth <= 600) {
+      if (currentSlide3++ >= slides3.length) currentSlide3 = 1;
       showSlide(slides3, currentSlide3 - 1);
     }
   }
@@ -50,5 +50,23 @@ const backToTop = () => {
 };
 
 mybutton.addEventListener("click", backToTop);
-
 window.addEventListener("scroll", scrollFunction);
+
+var darkThemeBtn = document.getElementById("dark-theme-btn");
+var darkTheme = document.getElementById("dark-theme");
+var darkMode = document.getElementById("dark-mode");
+var darkThemeStatus = false;
+darkThemeBtn.addEventListener("click", changeDarkTheme);
+function changeDarkTheme() {
+  if (darkThemeStatus == false) {
+    darkTheme.classList.remove("fa-sun");
+    darkTheme.classList.add("fa-moon");
+    darkMode.classList.add("dark-theme");
+    darkThemeStatus = true;
+  } else {
+    darkTheme.classList.add("fa-sun");
+    darkTheme.classList.remove("fa-moon");
+    darkMode.classList.remove("dark-theme");
+    darkThemeStatus = false;
+  }
+}

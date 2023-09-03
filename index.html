@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="./reset.css">
 </head>
 
-<body>
-    <div>
-        <header class="sticky z-[1000] top-0 left-0 ">
+<body class="overflow-auto no-scrollbar">
+    <div id="dark-mode">
+        <header class="sticky z-[1000] top-0 left-0">
             <nav
-                class=" relative container ml-[16px] top-0 left-0 z-1 flex-no-wrap justify-start md:items-center md:justify-between w-full shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:px-4">
+                class="relative container md:mx-[16px] m-auto top-0 left-0 z-1 flex-no-wrap md:items-center md:justify-between w-full shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start">
                 <div
-                    class=" flex items-center justify-between px-[40px] md:w-[calc(100%+2rem)] bg-white py-[16px] lg:py-[0px] mr-[16px]">
+                    class="relative flex items-center justify-between py-4 px-[40px] lg:w-[calc(100%+2rem)] bg-white lg:py-[0px] mx-0 md:mx-[16px]">
                     <div>
                         <img src="./assets/logo/logo.png" class="w-[92px] h-[26px]">
                     </div>
@@ -117,8 +117,14 @@
                             <a href="#">CONTACT US</a>
                         </li>
                     </ul>
-                    <div class="block lg:hidden"><i class="fa-solid fa-bars"></i></div>
+                    <div
+                        class="flex inline-block absolute text-black top-[25%] right-[32px] lg:right-[8px] translate-y-1/2 z-[100]">
+                        <button class="mx-[8px] " id="dark-theme-btn">
+                            <i class="fa-regular fa-sun" id="dark-theme"></i></button>
+                        <div class="lg:hidden"><i class="fa-solid fa-bars"></i></div>
+                    </div>
                 </div>
+
                 <div class="hidden md:block"><a href="#"><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
                             class="absolute w-[160px] h-[72px] right-[-200px] top-0" /></a>
                 </div>
@@ -153,10 +159,10 @@
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-            <section class="px-auto max-w-screen-2xl w-full md:h-full">
+            <section class="z-[1] px-auto max-w-screen-2xl">
                 <div class="relative">
                     <div
-                        class="flex relative overflow-hidden snap-mandatory snap-x scroll-smooth decoration-transparent w-full h-full">
+                        class="flex justify-center relative overflow-hidden snap-mandatory snap-x scroll-smooth decoration-transparent w-full h-full">
                         <div class="hidden slide snap-center px-4 flex-shrink-0">
                             <img src="./assets/banner/home-banner-1.a7a93ee0.webp" alt="home-banner-1"
                                 class="object-cover inset-0 h-[50%] w-full md:h-full" />
@@ -176,27 +182,27 @@
                     </div>
                 </div>
             </section>
-            <section class="py-[20px] relative top-[-50%]">
+            <section class="z-[1] my-[80px]">
                 <div class="flex max-w-screen-xl m-auto flex-col md:flex-row">
                     <div class="p-4 h-auto max-w-full md:w-[45%]">
                         <img src="./assets/about-me/about-me.4cbbb458.webp" alt="About NhiLe Life Coach"
                             class="object-cover m-auto p-[16px]">
                     </div>
                     <div
-                        class="relative flex flex-col items-center md:items-start justify-center mx-[8px] md:mr-[36px] w-full md:w-[55%] my-[36px]">
-                        <div class="flex flex-col items-center justify-center">
+                        class="relative flex flex-col items-center md:items-start justify-center md:mr-[36px] w-full md:w-[55%] my-[36px]">
+                        <div class="flex flex-col items-center justify-center md:justify-start">
                             <h2 class="uppercase font-bold leading-none tracking-2 my-[15px] text-red-400">About me</h2>
                             <h1 class="text-3xl md:text-5xl font-bold tracking-[-1px] uppercase m-0">NhiLe
                                 Life Coach</h1>
                         </div>
-                        <div class="text-base m-[24px]">
-                            <div class="text-justify my-[24px] w-full px-16px">Welcome to the FREE and
+                        <div class="my-[24px] md:ml-0 w-full">
+                            <div class="text-justify my-[24px] px-[16px]">Welcome to the FREE and
                                 VALUABLE knowledge treasure trove of Nhi Le - the first Life Coach in Vietnam. Nhi Le
                                 helps people become happy, develop
                                 themselves,
                                 and find the answer to the question "Who am I?" via the lessons and experiences she has
                                 accumulated.</div>
-                            <div class="text-justify my-[24px] w-full px-16px">Despite growing up in an
+                            <div class="text-justify my-[24px] w-full px-[16px]">Despite growing up in an
                                 imperfect environment in Quang Nam
                                 province and becoming a single mother in a foreign land, Nhi Le never gave up. She
                                 tirelessly learns and develops herself, standing up against obstacles. With effort and
@@ -205,7 +211,7 @@
                                 advisor, leader to renowned healing speaker, not only in Singapore but also in many
                                 other
                                 parts of the world.</div>
-                            <div class="text-justify my-[24px] w-full px-16px">To assist the people of
+                            <div class="text-justify my-[24px] w-full px-[16px]">To assist the people of
                                 Vietnam in transforming their lives and
                                 uncovering their inner potential, Nhi Le, along with the Strengths Quotient Institute
                                 (SQI)
@@ -218,14 +224,14 @@
                                 class="absolute z-[3] top-[100%] left-[50%] translate-x-[-50%] md:translate-x-0 md:left-0 uppercase inline-flex text-base md:text-lg leading-4 border ring-4 rounded py-[16px] px-[8px] md:py-[22px] md:px-[45px] cursor-pointer">
                                 <span class="mr-8">View more</span>
                                 <span>
-                                    <i class="fa fa-arrow-right "></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </span>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="mt-[24px] md:my-0">
+            <section class="z-[1] py-[80px] md:my-0">
                 <div
                     class="flex flex-col md:flex-row items-center justify-center md:justify-around max-w-6xl m-auto p-4">
                     <div class="md:w-[30%]">
@@ -293,7 +299,7 @@
                     </div>
                 </div>
             </section>
-            <section class="">
+            <section class="z-[1] md:py-[80px]">
                 <div class="">
                     <div class="my-[16px]">
                         <div class="text-3xl md:text-5xl text-center ">
@@ -331,7 +337,7 @@
                         </ul>
                     </div>
                     <div
-                        class="relative grid lg:grid-cols-4 lg:gap-4 lg:px-[30px] md:grid-cols-3 md:gap-2 md:px-[16px]">
+                        class="relative grid lg:grid-cols-4 lg:gap-2 lg:px-[30px] md:grid-cols-3 gap-0 md:gap-1 md:px-[16px]">
                         <div class="slide-3 hidden md:block p-[8px] w-full h-full text-center overflow-hidden">
                             <a href="#" class=""><img src="./assets/other-services/image.jpg" alt=""
                                     class="object-cover w-full h-full md:w-[280px] md:h-[280px] m-auto"></a>
@@ -382,13 +388,13 @@
                     </div>
                 </div>
             </section>
-            <section class="py-[80px] bg-gray-200">
+            <section class="z-[1] py-[80px] bg-gray-200 text-gray-900">
                 <div class="mx-[16px] md:mx-[30px]">
                     <h2 class=" ml-[15px] uppercase text-red font-bold -tracking-2 leading-none m-auto">
                         Customers Talk About Us
                     </h2>
                     <div class="hidden flex flex-col md:flex-row items-center justify-between slide-2">
-                        <div class="flex flex-col p-[8px] md:px-[15px] w-full md:w-[50%]">
+                        <div class="flex flex-col p-[8px] w-full md:px-[15px] md:w-[50%]">
                             <div class="text-3xl md:text-5xl">
                                 <h3>DOUGLAS STEVENSON</h3>
                             </div>
@@ -493,7 +499,7 @@
                 class="z-[1000] bottom-[20px] right-[20px] uppercase inline-block text-lg border ring-4 p-[10px] md:p-[20px] cursor-pointer !fixed hidden rounded-full p-3 font-medium text-red leading-tight shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg">
                 <span class="inline-block text-red"><i class="fa-solid fa-arrow-up-long"></i></span></button>
         </article>
-        <footer class="x">
+        <footer class="dark-mode">
             <div
                 class="mx-auto py-[20px] px-[30px] grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8 md:grid-cols-2 lg:grid-cols-4 place-content-around">
                 <div class="px-15 w-270 md:text-center">
@@ -593,6 +599,15 @@
 
         .animate-slide-left {
             animation: slideLeft 0.5s ease-in-out;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .dark-theme {
+            background-color: rgb(58, 54, 54);
+            color: white;
         }
     </style>
     <script src="./nhisg.js"></script>
