@@ -12,15 +12,133 @@
 
 <body class="overflow-auto no-scrollbar">
     <div id="dark-mode">
-        <header class="sticky z-[1000] top-0 left-0">
+        <header class="sticky z-[1000] top-0 left-0 max-w-screen-2xl mx-auto flex">
             <nav
-                class="relative container md:mx-[16px] m-auto top-0 left-0 z-1 flex-no-wrap md:items-center md:justify-between w-full shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start">
-                <div
-                    class="relative flex items-center justify-between py-4 px-[40px] lg:w-[calc(100%+2rem)] bg-white lg:py-[0px] mx-0 md:mx-[16px]">
+                class="relative container py-4 px-[40px] bg-white lg:py-[0px] mx-0 md:mx-[16px] flex-no-wrap md:items-center md:justify-between max-w-full shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start">
+                <div class="relative flex items-center justify-between mx-auto">
                     <div>
-                        <img src="./assets/logo/logo.png" class="w-[92px] h-[26px]">
+                        <a href="#">
+                            <img src="./assets/logo/logo.png" class="w-[92px] h-[26px]">
+                        </a>
                     </div>
-                    <ul class="hidden lg:flex justify-between items-center px-[30px] w-full text-black">
+                    <ul class="hidden lg:flex justify-around items-center px-[30px] w-full text-black space-x-4">
+                        <li class="group relative dropdown inline-flex hover:text-red-400 py-[24px]">
+                            <a href="#" class="dropdown-text inline-flex items-center uppercase text-red-400">HOME</a>
+                        </li>
+                        <li class="group relative dropdown inline-block hover:text-red-400 py-[24px]"><a
+                                href="#">PRIVATE COACHING</a>
+                        </li>
+                        <li class="group relative dropdown inline-block  py-[24px]">
+                            <a href="#" class="hover:text-red-400">OTHER SERVICES
+                                <i
+                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
+                            <ul
+                                class="group-hover:block dropdown-menu absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">DIGITAL MARKETING</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">VIDEO EDITOR</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">GRAPHIC DESIGN</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">WEBSITE & APP DEVELOPMENT</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">SOCIAL MEDIA SUPPORT</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">PERSONAL BRANDING DEVELOPMENT</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">INTERIOR DESIGN</a>
+                                </li>
+                                </a>
+                            </ul>
+                        </li>
+                        <li class="group relative dropdown inline-block py-[24px]">
+                            <a href="#" class="hover:text-red-400">PROJECTS
+                                <i
+                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
+                            <ul
+                                class="group-hover:block dropdown-menu absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">NHILE OFFICIAL</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">NHILE FOUNDATION</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">SPICE & NICE</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">MS NHI</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">KID K</a>
+                                </li>
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">IKIGAI ZONE</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="group relative dropdown inline-block py-[24px]">
+                            <a href="#" class="hover:text-red-400">ABOUT US
+                                <i
+                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
+                            <ul
+                                class="group-hover:block dropdown-menu absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
+                                <li
+                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                    <a href="#">REVIEW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="group relative dropdown inline-block hover:text-red-400 py-[24px]">
+                            <a href="#">FREE TRAINING</a>
+
+                        </li>
+                        <li class="group relative dropdown inline-block hover:text-red-400 py-[24px]">
+                            <a href="#">CONTACT US</a>
+                        </li>
+                    </ul>
+                    <div class="flex inline-block text-black">
+                        <button class="mx-[8px] " id="dark-theme-btn">
+                            <i class="fa-regular fa-sun" id="dark-theme"></i></button>
+                        <div class="lg:hidden" id="menu-moblie"><i class="fa-solid fa-bars"></i></div>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="hidden md:inline-block"><a href="#"><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
+                        class="w-[160px] h-[72px]" /></a>
+            </div>
+            <div class="hidden">
+                <div class="">
+                    <div class=""><button id="close-btn"><i class="fa-solid fa-x"></i></button></div>
+                </div>
+                <div class="">
+                    <a href="#">
+                        <img src="./assets/logo/logo.png" class="w-[92px] h-[26px]">
+                    </a>
+                </div>
+                <div class="">
+                    <ul class="hidden lg:flex justify-around items-center px-[30px] w-full text-black space-x-4">
                         <li class="group relative dropdown inline-flex hover:text-red-400 py-[24px]">
                             <a href="#" class="dropdown-text inline-flex items-center uppercase text-red-400">HOME</a>
                         </li>
@@ -117,49 +235,40 @@
                             <a href="#">CONTACT US</a>
                         </li>
                     </ul>
-                    <div
-                        class="flex inline-block absolute text-black top-[25%] right-[32px] lg:right-[8px] translate-y-1/2 z-[100]">
-                        <button class="mx-[8px] " id="dark-theme-btn">
-                            <i class="fa-regular fa-sun" id="dark-theme"></i></button>
-                        <div class="lg:hidden"><i class="fa-solid fa-bars"></i></div>
-                    </div>
                 </div>
-
-                <div class="hidden md:block"><a href="#"><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
-                            class="absolute w-[160px] h-[72px] right-[-200px] top-0" /></a>
-                </div>
-            </nav>
-
+                <a href="" class=""><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
+                        class="absolute w-[160px] h-[72px] right-0 top-0" /></a>
+            </div>
         </header>
         <article class="flex-auto w-full relative top-0 md:top-[-72px] left-0">
             <div
                 class="flex flex-col justify-end text-right absolute right-[10px] top-[50px] md:right-[60px] md:top-[152px] z-[200]">
-                <a href="https://www.youtube.com/c/NHILELifecoach"
+                <a href="https://www.youtube.com/c/NHILELifecoach" target="_blank"
                     class="m-[8px] bg-red-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://www.facebook.com/AnneNhiLe"
+                <a href="https://www.facebook.com/AnneNhiLe" target="_blank"
                     class="m-[8px] bg-blue-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@nhile_official"
+                <a href="https://www.tiktok.com/@nhile_official" target="_blank"
                     class="m-[8px] bg-black inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/nhi_sg"
+                <a href="https://www.instagram.com/nhi_sg" target="_blank"
                     class="m-[8px] bg-orange-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/nhileofficial"
+                <a href="https://t.me/nhileofficial" target="_blank"
                     class="m-[8px] bg-cyan-400 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fab fa-telegram-plane"></i></a>
-                <a href="https://open.spotify.com/show/075oMTANwNWPZpQgvwh674?si=aa25bcf2f4c848ee"
+                <a href="https://open.spotify.com/show/075oMTANwNWPZpQgvwh674?si=aa25bcf2f4c848ee" target="_blank"
                     class="m-[8px] bg-green-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class=" fa-brands fa-spotify"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/77701425"
+                <a href="https://www.linkedin.com/company/77701425" target="_blank"
                     class="m-[8px] bg-cyan-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h38 p-1.5 mr-[15px]">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-            <section class="z-[1] px-auto max-w-screen-2xl">
+            <section class="z-[1] px-auto max-w-screen-2xl mx-auto">
                 <div class="relative">
                     <div
                         class="flex justify-center relative overflow-hidden snap-mandatory snap-x scroll-smooth decoration-transparent w-full h-full">
@@ -299,7 +408,7 @@
                     </div>
                 </div>
             </section>
-            <section class="z-[1] md:py-[80px]">
+            <section class="z-[1] md:py-[80px] max-w-screen-2xl mx-auto">
                 <div class="">
                     <div class="my-[16px]">
                         <div class="text-3xl md:text-5xl text-center ">
@@ -388,14 +497,14 @@
                     </div>
                 </div>
             </section>
-            <section class="z-[1] py-[80px] bg-gray-200 text-gray-900">
-                <div class="mx-[16px] md:mx-[30px]">
+            <section class="py-[80px] bg-gray-200 text-gray-700 flex items-center justify-center">
+                <div class="mx-[16px] md:mx-[30px] flex flex-col items-center justify-center max-w-screen-2xl mx-auto">
                     <h2 class=" ml-[15px] uppercase text-red font-bold -tracking-2 leading-none m-auto">
                         Customers Talk About Us
                     </h2>
-                    <div class="hidden flex flex-col md:flex-row items-center justify-between slide-2">
-                        <div class="flex flex-col p-[8px] w-full md:px-[15px] md:w-[50%]">
-                            <div class="text-3xl md:text-5xl">
+                    <div class="hidden flex flex-col md:flex-row items-start justify-center slide-2">
+                        <div class="flex flex-col justify-start p-[8px] w-full md:px-[15px] md:w-[50%]">
+                            <div class="text-3xl md:text-5xl my-[16px]">
                                 <h3>DOUGLAS STEVENSON</h3>
                             </div>
                             <div class="h-auto block text-justify">
@@ -429,9 +538,9 @@
                         </div>
                     </div>
 
-                    <div class="hidden flex flex-col md:flex-row items-center justify-between slide-2">
+                    <div class="hidden flex flex-col md:flex-row items-start justify-center slide-2">
                         <div class="flex flex-col p-[8px] md:p-[15px] w-full md:w-[50%]">
-                            <div class="text-3xl md:text-5xl">
+                            <div class="text-3xl md:text-5xl my-[16px]">
                                 <h3>JOVAN MEDRANO</h3>
                             </div>
                             <div class="text-justify h-auto block">
@@ -459,9 +568,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden flex flex-col md:flex-row items-center justify-center slide-2">
+                    <div class="hidden flex flex-col md:flex-row items-start justify-center slide-2">
                         <div class="flex flex-col p-[8px] md:p-[15px] w-full md:w-[50%]">
-                            <div class="text-3xl md:text-5xl">
+                            <div class="text-3xl md:text-5xl my-[16px]">
                                 <h3>MICHAEL LE</h3>
                             </div>
                             <div class="text-justify h-auto block ">
@@ -501,7 +610,7 @@
         </article>
         <footer class="dark-mode">
             <div
-                class="mx-auto py-[20px] px-[30px] grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8 md:grid-cols-2 lg:grid-cols-4 place-content-around">
+                class="max-w-screen-2xl mx-auto py-[20px] px-[30px] grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8 md:grid-cols-2 lg:grid-cols-4 place-content-around">
                 <div class="px-15 w-270 md:text-center">
                     <h3 class="mb-15 font-bold text-2xl text-center">SERVICES</h3>
                     <ul class="hidden md:block ">
@@ -540,45 +649,48 @@
                     </ul>
                 </div>
             </div>
-            <div class="py-[24px] px-[16px] bg-gray-200 flex flex-col md:flex-row items-center justify-between">
-                <div class="relative flex flex-wrap justify-start items-center">
-                    <div class="flex flex-col md:flex-row items-center justify-start">
-                        <a href="#"><span><img src="./assets/logo/logo.png" class="w-[92px] h-[26px]"></span></a>
-                        <span class="inline-block ml-[10px] text-gray-800">©<b>2023. All rights reserved</b></span>
+            <div class="py-[24px] px-[16px] bg-gray-200 ">
+                <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                    <div class="relative flex flex-wrap justify-start items-center">
+                        <div class="flex flex-col md:flex-row items-center justify-start">
+                            <a href="#"><span><img src="./assets/logo/logo.png" class="w-[92px] h-[26px]"></span></a>
+                            <span class="inline-block ml-[10px] text-gray-800">©<b>2023. All rights reserved</b></span>
+                        </div>
+                        <div class=""></div>
                     </div>
-                    <div class=""></div>
-                </div>
-                <div class="flex flex-col md:flex-row justify-end items-center">
-                    <div class="flex justify-end text-right">
-                        <a href="https://www.youtube.com/c/NHILELifecoach"
-                            class="mr-15 bg-red-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.facebook.com/AnneNhiLe"
-                            class="mr-15 bg-blue-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.tiktok.com/@nhile_official"
-                            class="mr-15 bg-black inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://www.instagram.com/nhi_sg"
-                            class="mr-15 bg-orange-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fab fa-instagram"></i></a>
-                        <a href="https://t.me/nhileofficial"
-                            class="mr-15 bg-cyan-400 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fab fa-telegram-plane"></i></a>
-                        <a href="https://open.spotify.com/show/075oMTANwNWPZpQgvwh674?si=aa25bcf2f4c848ee"
-                            class="mr-15 bg-green-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class=" fa-brands fa-spotify"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/77701425"
-                            class="mr-15 bg-cyan-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-globe"></i>
-                        <span class="language-text">English</span>
-                        <i class="fa-solid fa-chevron-up"></i>
+                    <div class="flex flex-col md:flex-row justify-end items-center">
+                        <div class="flex justify-end text-right">
+                            <a href="https://www.youtube.com/c/NHILELifecoach" target="_blank"
+                                class="mr-15 bg-red-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/AnneNhiLe" target="_blank"
+                                class="mr-15 bg-blue-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@nhile_official" target="_blank"
+                                class="mr-15 bg-black inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/nhi_sg" target="_blank"
+                                class="mr-15 bg-orange-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fab fa-instagram"></i></a>
+                            <a href="https://t.me/nhileofficial" target="_blank"
+                                class="mr-15 bg-cyan-400 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://open.spotify.com/show/075oMTANwNWPZpQgvwh674?si=aa25bcf2f4c848ee"
+                                target="_blank"
+                                class="mr-15 bg-green-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class=" fa-brands fa-spotify"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/77701425" target="_blank"
+                                class="mr-15 bg-cyan-600 inline-flex items-center justify-center rounded-[50%] text-white w-38 h-38 p-1.5 mr-[15px]">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="language-text">English</span>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
                     </div>
                 </div>
             </div>

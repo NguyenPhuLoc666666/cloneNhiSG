@@ -70,3 +70,7 @@ function changeDarkTheme() {
     darkThemeStatus = false;
   }
 }
+
+var menu = document.getElementById("menu-moblie");
+menu.addEventListener("click", handleShowMenu);
+function handleShowMenu() {}
