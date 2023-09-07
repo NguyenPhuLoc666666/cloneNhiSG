@@ -54,21 +54,25 @@ window.addEventListener("scroll", scrollFunction);
 
 var darkThemeBtn = document.getElementById("dark-theme-btn");
 var darkTheme = document.getElementById("dark-theme");
-var darkMode = document.getElementById("dark-mode");
+var darkModes = document.querySelectorAll(".dark-mode");
 var darkThemeStatus = false;
 darkThemeBtn.addEventListener("click", changeDarkTheme);
 function changeDarkTheme() {
   if (darkThemeStatus == false) {
     darkTheme.classList.remove("fa-sun");
     darkTheme.classList.add("fa-moon");
-    darkMode.classList.add("dark-theme");
     darkThemeStatus = true;
   } else {
     darkTheme.classList.add("fa-sun");
     darkTheme.classList.remove("fa-moon");
-    darkMode.classList.remove("dark-theme");
+
     darkThemeStatus = false;
   }
+  darkTheme.classList.toggle("text-white", darkThemeStatus == true);
+  darkModes.forEach(function (darkMode) {
+    darkMode.classList.toggle("dark-theme", darkThemeStatus == true);
+    //darkMode.classList.toggle("light-theme", darkThemeStatus == false);
+  });
 }
 
 var menu = document.getElementById("menu-moblie");
