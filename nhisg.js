@@ -1,3 +1,14 @@
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        barlow: ["Barlow Condensed", "sans-serif"],
+        arimo: ["Arimo", "sans-serif"],
+      },
+    },
+  },
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   var slides = document.querySelectorAll(".slide");
   var slides2 = document.querySelectorAll(".slide-2");
