@@ -10,12 +10,14 @@ tailwind.config = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  var slides = document.querySelectorAll(".slide");
-  var slides2 = document.querySelectorAll(".slide-2");
-  var slides3 = document.querySelectorAll(".slide-3");
-  var currentSlide = 0;
-  var currentSlide2 = 0;
-  var currentSlide3 = 0;
+  const slides = document.querySelectorAll(".slide");
+  const slides2 = document.querySelectorAll(".slide-2");
+  const slides3 = document.querySelectorAll(".slide-3");
+  let currentSlide = 0;
+  let currentSlide2 = 0;
+  let currentSlide3 = 0;
+  const interval1 = 3000;
+  const interval2 = 4000;
 
   function showSlide(slides, n) {
     slides.forEach(function (slide) {
@@ -26,24 +28,26 @@ document.addEventListener("DOMContentLoaded", function () {
     slides[n].classList.remove("hidden");
   }
 
-  function nextSlide() {
-    if (currentSlide++ >= slides.length) currentSlide = 1;
-    showSlide(slides, currentSlide - 1);
-  }
-  function nextSlide2() {
-    if (currentSlide2++ >= slides2.length) currentSlide2 = 1;
-    showSlide(slides2, currentSlide2 - 1);
-  }
-  function nextSlide3() {
-    if (window.innerWidth <= 600) {
-      if (currentSlide3++ >= slides3.length) currentSlide3 = 1;
-      showSlide(slides3, currentSlide3 - 1);
-    }
+  function nextSlide(slides, currentSlide) {
+    if (++currentSlide >= slides.length) currentSlide = 0;
+    showSlide(slides, currentSlide);
+    return currentSlide;
   }
 
-  setInterval(nextSlide, 3000);
-  setInterval(nextSlide2, 4000);
-  setInterval(nextSlide3, 3000);
+  function nextSlide3() {
+    if (window.innerWidth > 600) return;
+    currentSlide3 = nextSlide(slides3, currentSlide3);
+  }
+
+  setInterval(function () {
+    currentSlide = nextSlide(slides, currentSlide);
+  }, interval1);
+
+  setInterval(function () {
+    currentSlide2 = nextSlide(slides2, currentSlide2);
+  }, interval2);
+
+  setInterval(nextSlide3, interval1);
 });
 
 // button scroll to top
@@ -62,30 +66,36 @@ const backToTop = () => {
 
 mybutton.addEventListener("click", backToTop);
 window.addEventListener("scroll", scrollFunction);
+const darkThemeBtn = document.getElementById("dark-theme-btn");
+const darkTheme = document.getElementById("dark-theme");
+const darkModes = document.querySelectorAll(".dark-mode");
+let darkThemeStatus = false;
 
-var darkThemeBtn = document.getElementById("dark-theme-btn");
-var darkTheme = document.getElementById("dark-theme");
-var darkModes = document.querySelectorAll(".dark-mode");
-var darkThemeStatus = false;
 darkThemeBtn.addEventListener("click", changeDarkTheme);
-function changeDarkTheme() {
-  if (darkThemeStatus == false) {
-    darkTheme.classList.remove("fa-sun");
-    darkTheme.classList.add("fa-moon");
-    darkThemeStatus = true;
-  } else {
-    darkTheme.classList.add("fa-sun");
-    darkTheme.classList.remove("fa-moon");
 
-    darkThemeStatus = false;
-  }
-  darkTheme.classList.toggle("text-white", darkThemeStatus == true);
+function changeDarkTheme() {
+  darkThemeStatus = !darkThemeStatus;
+  darkTheme.classList.toggle("fa-sun", !darkThemeStatus);
+  darkTheme.classList.toggle("fa-moon", darkThemeStatus);
+  darkTheme.classList.toggle("text-white", darkThemeStatus);
+
   darkModes.forEach(function (darkMode) {
-    darkMode.classList.toggle("dark-theme", darkThemeStatus == true);
-    //darkMode.classList.toggle("light-theme", darkThemeStatus == false);
+    darkMode.classList.toggle("dark-theme", darkThemeStatus);
+    //darkMode.classList.toggle("light-theme", !darkThemeStatus);
   });
 }
 
-var menu = document.getElementById("menu-moblie");
-menu.addEventListener("click", handleShowMenu);
-function handleShowMenu() {}
+let valueDisplays = document.querySelectorAll(".value-display");
+let interval = 1000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 500;
+    valueDisplay.textContent = startValue;
+    if (startValue >= endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
