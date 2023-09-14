@@ -85,17 +85,42 @@ function changeDarkTheme() {
   });
 }
 
+// let valueDisplays = document.querySelectorAll(".value-display");
+// let interval = 1000;
+// valueDisplays.forEach((valueDisplay) => {
+//   let startValue = 0;
+//   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+//   let duration = Math.floor(interval / endValue);
+//   let counter = setInterval(function () {
+//     startValue += 500;
+//     valueDisplay.textContent = startValue;
+//     if (startValue >= endValue) {
+//       clearInterval(counter);
+//     }
+//   }, duration);
+// });
 let valueDisplays = document.querySelectorAll(".value-display");
 let interval = 1000;
+let maxTargetValue = 0;
+
+// Find the maximum target value among all value displays
+valueDisplays.forEach((valueDisplay) => {
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  if (endValue > maxTargetValue) {
+    maxTargetValue = endValue;
+  }
+});
+
 valueDisplays.forEach((valueDisplay) => {
   let startValue = 0;
   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-  let duration = Math.floor(interval / endValue);
+  let duration = Math.floor(interval / maxTargetValue);
   let counter = setInterval(function () {
-    startValue += 500;
+    startValue += Math.floor((endValue / maxTargetValue) * 4000);
     valueDisplay.textContent = startValue;
     if (startValue >= endValue) {
       clearInterval(counter);
+      valueDisplay.textContent = endValue;
     }
   }, duration);
 });
