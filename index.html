@@ -18,7 +18,7 @@
     <div class="dark-mode font-barlow">
         <header class="sticky z-[1000] top-0 left-0 max-w-screen-2xl mx-auto flex">
             <nav
-                class="relative dark-mode bg-white container py-4 px-[40px] lg:py-[0px] mx-0 md:mx-[16px] flex-no-wrap md:items-center md:justify-between max-w-full">
+                class="relative dark-mode bg-white container py-4 md:py-0 px-[16px] mx-0 md:mx-[16px] flex-no-wrap md:items-center md:justify-between w-full">
                 <div class="relative flex items-center justify-between mx-auto">
                     <div>
                         <a href="#">
@@ -26,7 +26,7 @@
                         </a>
                     </div>
                     <ul
-                        class="hidden dark-mode lg:flex justify-around items-center px-[30px] w-full text-lg text-black">
+                        class="hidden dark-mode md:flex justify-around items-center px-[8px] lg:px-[24px] w-full md:text-sm xl:text-lg text-black">
                         <li class="group relative inline-block py-[24px] hover:text-red-700">
                             <a href="#" class="inline-flex items-center uppercase text-red-700">HOME</a>
                         </li>
@@ -37,7 +37,7 @@
                             <a href="#" class="inline-flex items-center uppercase">OTHER SERVICES
                                 <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
                             <ul
-                                class="group-hover:block dark-mode absolute hidden h-auto z-10 min-w-[220px] bg-white text-black top-[100%] left-0">
+                                class="group-hover:block dark-mode absolute hidden h-auto z-[10] min-w-[220px] bg-white text-black top-[100%] left-0">
                                 <li
                                     class="block w-full p-[16px] cursor-pointer w-full text-start leading-tight transition-all hover:bg-red-700 hover:text-white">
                                     <a href="#">DIGITAL MARKETING</a>
@@ -73,7 +73,7 @@
                             <a href="#" class="inline-flex items-center uppercase">PROJECTS
                                 <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
                             <ul
-                                class="group-hover:block dark-mode absolute hidden h-auto z-10 min-w-[220px] bg-white text-black top-[100%] left-0">
+                                class="group-hover:block dark-mode absolute hidden h-auto z-[10] min-w-[220px] bg-white text-black top-[100%] left-0">
                                 <li
                                     class="block w-full p-[16px] cursor-pointer w-full text-start leading-tight transition-all hover:bg-red-700 hover:text-white">
                                     <a href="#">NHILE OFFICIAL</a>
@@ -101,10 +101,10 @@
                             </ul>
                         </li>
                         <li class="group relative inline-block py-[24px] hover:text-red-700">
-                            <a href="#" class="0">ABOUT US
+                            <a href="#" class="inline-flex items-center uppercase">ABOUT US
                                 <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
                             <ul
-                                class="group-hover:block dark-mode absolute hidden h-auto z-10 min-w-[220px] bg-white text-black top-[100%] left-0">
+                                class="group-hover:block dark-mode absolute hidden h-auto z-[10] min-w-[220px] bg-white text-black top-[100%] left-0">
                                 <li
                                     class="block w-full p-[16px] cursor-pointer w-full text-start leading-tight transition-all hover:bg-red-700 hover:text-white">
                                     <a href="#">REVIEW</a>
@@ -112,134 +112,126 @@
                             </ul>
                         </li>
                         <li class="group relative inline-block py-[24px] hover:text-red-700">
-                            <a href="#">FREE TRAINING</a>
+                            <a href="#" class="inline-flex items-center uppercase">FREE TRAINING</a>
 
                         </li>
                         <li class="group relative inline-block py-[24px] hover:text-red-700">
-                            <a href="#">CONTACT US</a>
+                            <a href="#" class="inline-flex items-center uppercase">CONTACT US</a>
                         </li>
                     </ul>
                     <div class="flex inline-block text-black">
                         <button class="mx-[8px] " id="dark-theme-btn">
                             <i class="fa-regular fa-sun" id="dark-theme"></i></button>
-                        <div class="lg:hidden" id="menu-moblie"><i class="fa-solid fa-bars"></i></div>
+                        <div class="lg:hidden" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
                     </div>
                 </div>
 
             </nav>
-            <div class="hidden md:inline-block mr-[16px]"><a href="#"><img
+            <div class="hidden lg:inline-block mr-[16px]"><a href="#"><img
                         src="./assets/logo/nhile-foundation.5f805f58.jpg" class="w-[160px] h-[77px]" /></a>
             </div>
-            <div class="hidden">
-                <div class="">
+            <!-- <div class=""> -->
+
+
+            <div class=" flex flex-col dark-mode z-[1001] hidden block w-[270px] h-[100vh] absolute top-0 left-0 bg-white overflow-y-auto no-scrollbar"
+                id="side-menu-bar">
+                <a href="#" class="inset-0 bg-gray-100"></a>
+                <div class="absolute top-[16px] right-[16px]">
                     <div class=""><button id="close-btn"><i class="fa-solid fa-x"></i></button></div>
                 </div>
-                <div class="">
+                <div class="absolute top-[16px] left-[40px]">
                     <a href="#">
                         <img src="./assets/logo/logo.png" class="w-[92px] h-[26px]">
                     </a>
                 </div>
-                <div class="">
-                    <ul class="hidden lg:flex justify-around items-center px-[30px] w-full text-black space-x-4">
-                        <li class="group relative inline-flex hover:text-red-400 py-[24px]">
-                            <a href="#" class="dropdown-text inline-flex items-center uppercase text-red-400">HOME</a>
+                <div class="mt-[48px]">
+                    <ul class="flex flex-col items-start px-[16px] w-full py-[8px]">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full">
+                            <a href="#" class="inline-flex items-center uppercase text-red-700">HOME</a>
                         </li>
-                        <li class="group relative inline-block hover:text-red-400 py-[24px]"><a href="#">PRIVATE
-                                COACHING</a>
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full">
+                            <a href="#" class="inline-flex items-center uppercase">PRIVATE COACHING</a>
                         </li>
-                        <li class="group relative inline-block  py-[24px]">
-                            <a href="#" class="hover:text-red-400">OTHER SERVICES
-                                <i
-                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
-                            <ul
-                                class="group-hover:block absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full"
+                            id="menu-other-services__heading">
+                            <a href="#" class="inline-flex items-center uppercase">OTHER SERVICES
+                                <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
+                            <ul id="menu-other-services" class="dark-mode hidden h-auto w-full text-black">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">DIGITAL MARKETING</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">VIDEO EDITOR</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">GRAPHIC DESIGN</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">WEBSITE & APP DEVELOPMENT</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">SOCIAL MEDIA SUPPORT</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">PERSONAL BRANDING DEVELOPMENT</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">INTERIOR DESIGN</a>
                                 </li>
                                 </a>
                             </ul>
                         </li>
-                        <li class="group relative inline-block py-[24px]">
-                            <a href="#" class="hover:text-red-400">PROJECTS
-                                <i
-                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
-                            <ul
-                                class="group-hover:block absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full"
+                            id="menu-projects__heading">
+                            <a href="#" class="inline-flex items-center uppercase">PROJECTS
+                                <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
+                            <ul id="menu-projects" class="dark-mode hidden h-auto w-full text-black">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">NHILE OFFICIAL</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">NHILE FOUNDATION</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">SPICE & NICE</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">MS NHI</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">KID K</a>
                                 </li>
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">IKIGAI ZONE</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="group relative inline-block py-[24px]">
-                            <a href="#" class="hover:text-red-400">ABOUT US
-                                <i
-                                    class="text-gray-200 material-icons ml-[2px] h-[2px] w-[2px] inline-flex items-center fa-solid fa-chevron-down"></i></a>
-                            <ul
-                                class="group-hover:block absolute hidden h-auto z-10 min-w-[180px] overflow-auto rounded-md border border-blue-gray-50 bg-white p-3 font-sans text-sm font-normal text-blue-gray-500 shadow-lg shadow-blue-gray-500/10 focus:outline-none top-[100%] left-0">
-                                <li
-                                    class="block w-full cursor-pointer select-none rounded-md px-3 pt-[9px] pb-2 text-start leading-tight transition-all hover:bg-opacity-80 hover:text-red-400">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full"
+                            id="menu-about-us__heading">
+                            <a href="#" class="0">ABOUT US
+                                <i class="ml-[2px] hover:text-red-700 fa-solid fa-angle-down"></i></a>
+                            <ul id="menu-about-us" class="dark-mode hidden h-auto w-full text-black">
+                                <li class="block w-full p-[4px] cursor-pointer hover:bg-red-700 hover:text-white">
                                     <a href="#">REVIEW</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="group relative inline-block hover:text-red-400 py-[24px]">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full">
                             <a href="#">FREE TRAINING</a>
 
                         </li>
-                        <li class="group relative inline-block hover:text-red-400 py-[24px]">
+                        <li class="relative inline-block py-[8px] hover:text-red-700 w-full">
                             <a href="#">CONTACT US</a>
                         </li>
                     </ul>
                 </div>
-                <a href="" class=""><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
-                        class="block absolute w-full h-full right-0 top-0" /></a>
+                </nav>
+                <div class="ml-[16px] mb-[16px]">
+                    <a href="#"><img src="./assets/logo/nhile-foundation.5f805f58.jpg"
+                            class="block w-[160px] h-[77px] object-cover" /></a>
+                </div>
             </div>
+            <!-- </div> -->
         </header>
         <article class="flex-auto w-full relative top-0 md:top-[-80px] left-0">
             <div
@@ -269,7 +261,7 @@
                     <i class="fab fa-linkedin-in text-sky-500"></i>
                 </a>
             </div>
-            <section class="z-[1] px-auto max-w-screen-2xl mx-auto min-h-full">
+            <section class="z-[1] px-auto mx-auto min-w-full min-h-[50%] md:min-h-auto">
                 <div class="relative">
                     <div
                         class="flex justify-center relative overflow-hidden snap-mandatory snap-x scroll-smooth decoration-transparent">
@@ -300,7 +292,8 @@
                     </div>
                     <div
                         class="relative flex flex-col items-start md:items-start justify-center md:mr-[36px] w-full md:w-[55%] my-[36px]">
-                        <div class="flex flex-col items-center justify-center md:items-start pl-[16px]">
+                        <div
+                            class="flex flex-col items-center justify-center md:items-start pl-[16px] w-full text-center">
                             <h2 class="uppercase font-bold leading-none tracking-2 my-[15px] text-red-400">
                                 About me</h2>
                             <h1 class="text-3xl md:text-5xl font-bold tracking-[-1px] uppercase m-0">
@@ -312,7 +305,8 @@
                                 helps people become happy, develop
                                 themselves,
                                 and find the answer to the question "Who am I?" via the lessons and experiences she has
-                                accumulated.</div>
+                                accumulated.
+                            </div>
                             <div class="text-justify my-[24px] px-[16px]">Despite growing up in an
                                 imperfect environment in Quang Nam
                                 province and becoming a single mother in a foreign land, Nhi Le never gave up. She
@@ -321,7 +315,8 @@
                                 entrepreneur,
                                 advisor, leader to renowned healing speaker, not only in Singapore but also in many
                                 other
-                                parts of the world.</div>
+                                parts of the world.
+                            </div>
                             <div class="text-justify my-[24px] px-[16px]">To assist the people of
                                 Vietnam in transforming their lives and
                                 uncovering their inner potential, Nhi Le, along with the Strengths Quotient Institute
@@ -330,14 +325,17 @@
                                 The
                                 positive environment and valuable knowledge of the Ikigai Zone and SQI have also helped
                                 Nhi
-                                Le continuously "rebirth" herself into a more perfect version.</div>
-                            <a href="#"
-                                class="text-end hover:text-white hover:bg-red-700 uppercase inline-flex items-center text-base md:text-lg border-black border ring-1 py-[16px] px-[8px] md:py-[22px] md:px-[45px] cursor-pointer">
-                                <span class="mr-8 font-barlow">View more</span>
-                                <span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </span>
-                            </a>
+                                Le continuously "rebirth" herself into a more perfect version.
+                            </div>
+                            <div class="w-full flex">
+                                <a href="#"
+                                    class="hover:text-white hover:bg-red-700 uppercase mx-auto inline-flex items-center text-base md:text-lg hover:text-white hover:bg-red-700 uppercase inline-block text-lg border-black border ring-1 py-[22px] px-[45px] cursor-pointer">
+                                    <span class="mr-[8px] font-barlow">View more</span>
+                                    <span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,7 +377,7 @@
                         </div>
                     </div>
                     <div
-                        class="leading-relaxed font-normal break-words grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-4 lg:gap-4 justify-items-center items-center text-center w-full lg:w-[80%]">
+                        class="leading-relaxed font-normal grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-4 lg:gap-4 justify-items-center items-center text-center w-full lg:w-[80%]">
                         <div class="flex flex-col items-center py-[45px] px-[40px] border hover:text-red-700">
                             <div class="text-6xl text-red leading-none">
                                 <img src="./assets/achievement/privacy-life-coach.d83a0e26.png"
@@ -409,14 +407,14 @@
                     </div>
                 </div>
             </section>
-            <section class="z-[1] md:py-[80px] max-w-screen-2xl mx-auto">
-                <div class="">
+            <section class="">
+                <div class="md:py-[80px] max-w-screen-2xl mx-auto">
                     <div class="my-[16px]">
                         <div class="text-3xl md:text-4xl lg:text-6xl text-center ">
                             <h2 class="uppercase">other services</h2>
                         </div>
                         <ul
-                            class="flex justify-center items-center m-0 p-0 flex-wrap list-none gap-8 my-[16px] [&>*:not(:first-child)]:before:content-['--']">
+                            class="flex justify-center items-center m-0 p-0 flex-wrap list-none gap-8 my-[16px] md:[&>*:not(:first-child)]:before:content-['--']">
                             <li
                                 class="text-lg bg-red-700 cursor-pointer uppercase font-bold py-[10px] px-[20px] inline-flex pl-[16px] before:left-[-35px] before:text-red-600 before:text-2xl before:top-[50%] before:translate-x-[50%] before:translate-y-[-15%] before:relative">
                                 <h3 class="text-white">Marketing</h3>
@@ -448,7 +446,7 @@
                         </ul>
                     </div>
                     <div
-                        class="relative grid lg:grid-cols-4 lg:gap-2 lg:px-[30px] md:grid-cols-3 gap-0 md:gap-1 md:px-[16px]">
+                        class="relative grid lg:grid-cols-4 lg:gap-1 lg:px-[30px] md:grid-cols-3 gap-0 md:px-[16px] max-w-screen-2xl">
                         <div
                             class="slide-3 hidden md:block p-[8px] m-auto md:p-0 w-full h-full md:max-w-[280px] md:max-h-[280px] overflow-hidden">
                             <a href=" #" class="">
@@ -510,16 +508,14 @@
                     </div>
                 </div>
             </section>
-            <section class="">
-                <div
-                    class="relative py-[80px] bg-gray-200 text-gray-700 flex items-start justify-start md:min-h-[120%]">
-                    <div
-                        class="mx-[16px] md:mx-[30px] flex flex-col items-start justify-start max-w-screen-2xl mx-auto">
-                        <h2 class="ml-[15px] uppercase text-red font-bold -tracking-2 leading-none m-auto text-red-700">
+            <section class="py-[80px] bg-gray-200 text-gray-700 w-full">
+                <div class="max-w-screen-2xl mx-auto">
+                    <div class="relative mx-[16px] md:mx-[30px] flex flex-col items-start justify-start">
+                        <h2 class="ml-[15px] uppercase text-red font-bold m-auto text-red-700">
                             Customers Talk About Us
                         </h2>
                         <div
-                            class="hidden relative flex flex-col md:flex-row items-start justify-start slide-2 md:min-h-full">
+                            class="hidden relative flex flex-col md:flex-row items-start justify-start slide-2 min-h-[120%]">
                             <div class="flex flex-col justify-start p-[8px] w-full md:px-[15px] md:w-[50%] lg:w-[40%]">
                                 <div class="text-3xl md:text-5xl my-[16px]">
                                     <h3>DOUGLAS STEVENSON</h3>
@@ -553,11 +549,11 @@
                             <div class="flex items-center w-full md:w-[50%] lg:w-[60%]">
                                 <div class="p-[15px]">
                                     <img src="./assets/customers/douglas-large.f625abd7.webp" alt="DOUGLAS STEVENSON"
-                                        class="object-cover w-[280px] h-[460px]">
+                                        class="object-scale-down w-[280px] h-[460px]">
                                 </div>
                                 <div class="p-[15px]">
                                     <img src="./assets/customers/douglas-small.d35c3475.webp" alt="DOUGLAS STEVENSON"
-                                        class="object-cover w-[290px] h-[327px]">
+                                        class="object-scale-down w-[290px] h-[327px]">
                                 </div>
                             </div>
                         </div>
@@ -591,11 +587,11 @@
                             <div class="flex items-center p-[15px] w-full md:w-[50%] lg:w-[60%]">
                                 <div class="p-[15px]">
                                     <img src="./assets/customers/jovan-medrano-large.e6c1d1f3.webp" alt="JOVAN MEDRANO"
-                                        class="object-cover w-[280px] h-[460px]">
+                                        class="object-scale-down w-[280px] h-[460px]">
                                 </div>
                                 <div class="p-[15px]">
                                     <img src="./assets/customers/jovan-medrano-small.dc3df4ed.webp" alt="JOVAN MEDRANO"
-                                        class="object-cover w-[290px] h-[327px]">
+                                        class="object-scale-down w-[290px] h-[327px]">
                                 </div>
                             </div>
                         </div>
@@ -633,11 +629,11 @@
                             <div class="flex items-center p-[15px] w-full md:w-[50%] lg:w-[60%]">
                                 <div class="p-[15px]">
                                     <img src=" ./assets/customers/michael-le-large.42f6ab75.webp" alt="MICHAEL LE"
-                                        class="object-cover w-[280px] h-[460px]">
+                                        class="object-scale-down w-[280px] h-[460px]">
                                 </div>
                                 <div class="p-[15px]">
                                     <img src="./assets/customers/michael-le-small.f4bc3c1f.webp" alt="MICHAEL LE"
-                                        class="object-cover w-[290px] h-[327px]">
+                                        class="object-scale-down w-[290px] h-[327px]">
                                 </div>
                             </div>
                         </div>
@@ -646,15 +642,17 @@
 
             </section>
             <button id="btn-back-to-top"
-                class="z-[1000] bottom-[20px] right-[20px] uppercase inline-block text-lg border ring-1 p-[10px] md:p-[20px] cursor-pointer !fixed hidden rounded-full leading-tight hover:bg-red-700 hover:text-white">
+                class="z-[1000] bottom-[20px] right-[20px] uppercase inline-block text-lg border ring-1 p-[10px] md:p-[20px] cursor-pointer !fixed hidden leading-tight hover:bg-red-700 hover:text-white">
                 <span class="inline-block text-red"><i class="fa-solid fa-arrow-up-long"></i></span></button>
         </article>
         <footer class="dark-mode font-arimo relative z-[10]">
             <div
                 class="max-w-screen-2xl mx-auto py-[20px] px-[30px] grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8 md:grid-cols-2 lg:grid-cols-4 place-content-around">
-                <div class="px-15 w-270 md:text-center">
-                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">SERVICES</h3>
-                    <ul class="hidden md:block ">
+                <div class="px-15 w-270 md:text-center" id="footer-services__heading">
+                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">SERVICES
+                        <i class="ml-[2px] fa-solid fa-angle-down"></i>
+                    </h3>
+                    <ul class="hidden md:block text-center" id="footer-services">
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Digital Marketing</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Video Editor</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Graphic Design</a></li>
@@ -663,26 +661,33 @@
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Social Media Support</a></li>
                     </ul>
                 </div>
-                <div class="px-15 w-270 md:text-center">
-                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">OUR PAGES</h3>
-                    <ul class="hidden md:block">
+                <div class="px-15 w-270 md:text-center" id="footer-our-pages__heading">
+                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">OUR
+                        PAGES
+                        <i class="ml-[2px] fa-solid fa-angle-down"></i>
+                    </h3>
+                    <ul class="hidden md:block text-center" id="footer-our-pages">
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Free Training</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">About Us</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Private Coaching</a></li>
                     </ul>
                 </div>
-                <div class="px-15 w-270 md:text-center">
-                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">SUPPORT</h3>
-                    <ul class="hidden md:block">
+                <div class="px-15 w-270 md:text-center" id="footer-support__heading">
+                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">SUPPORT
+                        <i class="ml-[2px] fa-solid fa-angle-down"></i>
+                    </h3>
+                    <ul class="hidden md:block text-center" id="footer-support">
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Contact</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Privacy</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">FAQ</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Terms</a></li>
                     </ul>
                 </div>
-                <div class="px-15 w-270 md:text-center">
-                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">REGISTER</h3>
-                    <ul class="hidden md:block">
+                <div class="px-15 w-270 md:text-center" id="footer-register__heading">
+                    <h3 class="mb-15 font-bold text-2xl text-center font-barlow">REGISTER
+                        <i class="ml-[2px] fa-solid fa-angle-down"></i>
+                    </h3>
+                    <ul class="hidden md:block text-center" id="footer-register">
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">Nhi's House Member</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">NhiLe Team Volunteers</a></li>
                         <li class="py-[8px] text-gray-400 hover:text-red-400"><a href="#">NhiLe Ebook For FREE</a></li>
@@ -759,13 +764,13 @@
         }
 
         .dark-theme {
-            background-color: rgb(58, 54, 54);
-            color: white;
+            background-color: rgb(58, 54, 54) !important;
+            color: white !important;
         }
 
         .light-theme {
-            background-color: white;
-            color: black;
+            background-color: white !important;
+            color: black !important;
         }
     </style>
     <script src="./nhisg.js"></script>

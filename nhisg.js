@@ -81,24 +81,10 @@ function changeDarkTheme() {
 
   darkModes.forEach(function (darkMode) {
     darkMode.classList.toggle("dark-theme", darkThemeStatus);
-    //darkMode.classList.toggle("light-theme", !darkThemeStatus);
+    darkMode.classList.toggle("light-theme", !darkThemeStatus);
   });
 }
 
-// let valueDisplays = document.querySelectorAll(".value-display");
-// let interval = 1000;
-// valueDisplays.forEach((valueDisplay) => {
-//   let startValue = 0;
-//   let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-//   let duration = Math.floor(interval / endValue);
-//   let counter = setInterval(function () {
-//     startValue += 500;
-//     valueDisplay.textContent = startValue;
-//     if (startValue >= endValue) {
-//       clearInterval(counter);
-//     }
-//   }, duration);
-// });
 let valueDisplays = document.querySelectorAll(".value-display");
 let interval = 1000;
 let maxTargetValue = 0;
@@ -124,3 +110,81 @@ valueDisplays.forEach((valueDisplay) => {
     }
   }, duration);
 });
+
+// side menu bar
+let menuOtherServices = document.getElementById("menu-other-services");
+let menuProjects = document.getElementById("menu-projects");
+let menuAboutUs = document.getElementById("menu-about-us");
+
+let menuOtherServicesHeading = document.getElementById(
+  "menu-other-services__heading"
+);
+let menuProjectsHeading = document.getElementById("menu-projects__heading");
+let menuAboutUsHeading = document.getElementById("menu-about-us__heading");
+
+menuOtherServicesHeading.addEventListener("click", openSelection);
+menuProjectsHeading.addEventListener("click", openSelection);
+menuAboutUsHeading.addEventListener("click", openSelection);
+// footer
+let footerServices = document.getElementById("footer-services");
+let footerOurPages = document.getElementById("footer-our-pages");
+let footerSupport = document.getElementById("footer-support");
+let footerRegister = document.getElementById("footer-register");
+
+let footerServicesHeading = document.getElementById("footer-services__heading");
+let footerOurPagesHeading = document.getElementById(
+  "footer-our-pages__heading"
+);
+let footerSupportHeading = document.getElementById("footer-support__heading");
+let footerRegisterHeading = document.getElementById("footer-register__heading");
+
+footerServicesHeading.addEventListener("click", openSelection);
+footerOurPagesHeading.addEventListener("click", openSelection);
+footerSupportHeading.addEventListener("click", openSelection);
+footerRegisterHeading.addEventListener("click", openSelection);
+
+function openSelection() {
+  if (window.innerWidth > 600) return;
+  switch (this.id) {
+    case "menu-other-services__heading":
+      changeClassList(menuOtherServices);
+      break;
+    case "menu-projects__heading":
+      changeClassList(menuProjects);
+      break;
+    case "menu-about-us__heading":
+      changeClassList(menuAboutUs);
+      break;
+    case "footer-services__heading":
+      changeClassList(footerServices);
+      break;
+    case "footer-our-pages__heading":
+      changeClassList(footerOurPages);
+      break;
+    case "footer-support__heading":
+      changeClassList(footerSupport);
+      break;
+    case "footer-register__heading":
+      changeClassList(footerRegister);
+      break;
+  }
+}
+
+function changeClassList(elem) {
+  if (elem.classList.contains("hidden")) {
+    elem.classList.remove("hidden");
+    elem.classList.add("block");
+  } else {
+    elem.classList.remove("block");
+    elem.classList.add("hidden");
+  }
+}
+
+let menuIcon = document.getElementById("menu-icon");
+let sideMenuBar = document.getElementById("side-menu-bar");
+let closeBtn = document.getElementById("close-btn");
+menuIcon.addEventListener("click", openSideBar);
+function openSideBar() {
+  changeClassList(sideMenuBar);
+}
+closeBtn.addEventListener("click", openSideBar);
